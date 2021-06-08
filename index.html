@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-hexoUse" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/06/08/hexoUse/" class="article-date">
+  <time class="dt-published" datetime="2021-06-08T06:38:35.000Z" itemprop="datePublished">2021-06-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/06/08/hexoUse/">Hexo 博客搭建教程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>Hexo 是一个博客框架，项目语法是 Markdown，当然你也可以配置其他。</p>
+<h4 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a><strong>安装 Hexo</strong></h4><h5 id="1-环境准备"><a href="#1-环境准备" class="headerlink" title="1. 环境准备"></a><strong>1. 环境准备</strong></h5><p>基础环境配置完善 (详见<a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzkxOTE2ODg4Mg==&mid=2247485552&idx=1&sn=1f106756384127c5c96ffcd5e474ff48&chksm=c1a77a6df6d0f37b26d1388b95a1e9fd1650cf4a2a68a986224e2d36c5bafcbcea35e6ff7d11&scene=21#wechat_redirect">基础物料</a>) 可以输入一下命令进行环境 check 是否安装成功。</p>
+<p>git –version</p>
+<p>node -v</p>
+<p>npm -v</p>
+<h5 id="2-安装"><a href="#2-安装" class="headerlink" title="2. 安装"></a><strong>2. 安装</strong></h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<h5 id="3-初始化博客项目"><a href="#3-初始化博客项目" class="headerlink" title="3. 初始化博客项目"></a><strong>3. 初始化博客项目</strong></h5><p>执行一下命令</p>
+<p>hexo init xxx.github.io</p>
+<p>cd xxx.github.io</p>
+<p>项目结构如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">hiciciya.github.io</span><br><span class="line">├── db.json</span><br><span class="line">├── node_modules  <span class="comment">// 依赖 </span></span><br><span class="line">├── package.json <span class="comment">// 应用程序信息</span></span><br><span class="line">├── scaffolds  <span class="comment">//模板文件夹 </span></span><br><span class="line">│   ├── draft.md</span><br><span class="line">│   ├── page.md</span><br><span class="line">│   └── post.md</span><br><span class="line">├── source <span class="comment">// 资源文件夹 </span></span><br><span class="line">│   └── _posts</span><br><span class="line">├── themes <span class="comment">//主题 博客风格</span></span><br><span class="line">├── _config.landscape.yml</span><br><span class="line">└── _config.yml <span class="comment">//网站配置信息</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="4-本地运行项目"><a href="#4-本地运行项目" class="headerlink" title="4. 本地运行项目"></a><strong>4. 本地运行项目</strong></h5><p>npm run server</p>
+<p>or</p>
+<p>hexo -s</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/nVsZGO5dvqmmRibzfMYDxOzwTftu4mtsTPHYQ0guwbKZwJOQPHF38Isibk4XzCibP6yhHYyibUBCM8zDMgvm7wNhibQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>项目本地就运行起来了！it’S WORK。</p>
+<p>我们看到首页默认有一篇 HelloWord 的文章。我们来思考如何去控制这篇文章，在已生成目录中去找与 Helloword 内容相匹配的文件，发现** **/source/_posts/HelloWord ** **与我们看到的文章内容匹配。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">├── source</span><br><span class="line">│   └── _posts</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/nVsZGO5dvqmmRibzfMYDxOzwTftu4mtsT1jrbmhCvHV92FsjSAnNTsDKDczVjqLo3Np1vvZwhdp0lJpBz0ShAPw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<h5 id="5-尝试修改初始化的文章内容"><a href="#5-尝试修改初始化的文章内容" class="headerlink" title="5. 尝试修改初始化的文章内容"></a><strong>5. 尝试修改初始化的文章内容</strong></h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">---title: 我的第一篇文章---</span><br></pre></td></tr></table></figure>
+
+<p>页面中文章名称跟着变化生效了。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/nVsZGO5dvqmmRibzfMYDxOzwTftu4mtsTXPcNvibExpHeOxrjibL80BamyNchLq2XqtERibia3FcWDKWFs0ucBGdUPQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>得出的结论就是** <strong>/source/_posts 下的</strong> <strong>md</strong> **控制文章视图。</p>
+<h5 id="6-新建文章"><a href="#6-新建文章" class="headerlink" title="6. 新建文章"></a><strong>6. 新建文章</strong></h5><p>执行 hexo new MyWord</p>
+<p>顺着我们刚才的逻辑 <strong>/source/_posts</strong> <strong>应该增加一个 名为</strong> <strong>MyWord.md</strong>  的文件。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/nVsZGO5dvqmmRibzfMYDxOzwTftu4mtsTV8pfY8ONGic1ITepWibODKbxmib6X6sEI2gV2T43OeUqxGv1ZEyw9d9PQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>这样一篇文章就新建成功了！编辑文章内容，在 <strong>MyWord.md</strong> 可以随便来点内容。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">---title: MyWorddate: 2021-06-03 13:49:16tags: ---### 我的世界很简单 简单到我每顿只吃大龙虾</span><br></pre></td></tr></table></figure>
+
+<p>页面同步更新哈</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/nVsZGO5dvqmmRibzfMYDxOzwTftu4mtsTeibLGEPvYuxSgRialoU3t2KEwK1SzY8d5jyYI6sb5q3x65XJeibbIozjA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>恭喜第一篇博文发表成功！但是此刻仅是在本地哈。</p>
+<h3 id="3-部署-Github-pages"><a href="#3-部署-Github-pages" class="headerlink" title="3. 部署 Github pages"></a><strong>3. 部署 Github pages</strong></h3><h4 id="部署思路"><a href="#部署思路" class="headerlink" title="部署思路"></a><strong>部署思路</strong></h4><ul>
+<li><h4 id="本地代码变化"><a href="#本地代码变化" class="headerlink" title="本地代码变化"></a>本地代码变化</h4></li>
+<li><h4 id="同步到远端仓库"><a href="#同步到远端仓库" class="headerlink" title="同步到远端仓库"></a>同步到远端仓库</h4></li>
+<li><h4 id="客户端同步更新"><a href="#客户端同步更新" class="headerlink" title="客户端同步更新"></a>客户端同步更新</h4></li>
+</ul>
+<p>能自动化实现该流程是理想状态，持续集成（CI）工具则是最优解。Hexo 官方推荐 Travis。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/nVsZGO5dvqmmRibzfMYDxOzwTftu4mtsTsOMIZ8zcZF4LDaKiaRiacM5dOItSRDAxfzhqxtlibiao4R3cXyI7LCiaCOg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<h4 id="开始部署"><a href="#开始部署" class="headerlink" title="开始部署"></a><strong>开始部署</strong></h4><h6 id="1-Travis与github关联"><a href="#1-Travis与github关联" class="headerlink" title="1. Travis与github关联"></a><strong>1. Travis与github关联</strong></h6><h6 id="点击-https-www-travis-ci-com-进入-Travis-官网，右上角点击-Sign-in按钮。"><a href="#点击-https-www-travis-ci-com-进入-Travis-官网，右上角点击-Sign-in按钮。" class="headerlink" title="点击** https://www.travis-ci.com/ 进入 Travis 官网，右上角点击 Sign in按钮。"></a>点击** <strong><a target="_blank" rel="noopener" href="https://www.travis-ci.com/">https://www.travis-ci.com/</a></strong> <strong>进入</strong> <strong>Travis</strong> 官网，右上角点击 <code>Sign in</code>按钮。</h6><p><img src="https://mmbiz.qpic.cn/mmbiz_png/nVsZGO5dvqmmRibzfMYDxOzwTftu4mtsTyoict91AIcCUDKCsPAJiaERzJDuWOuu109hZzNPS2SdpLGclHY2do0eg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>进入 登录界面，点击 <strong>SIGN IN WITH GITHUB</strong> 按钮。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/nVsZGO5dvqmmRibzfMYDxOzwTftu4mtsTR34UicFDgjh5wvRBiaAYQaUCJMpOA4cyNp6Jefwmiagj7aYEWfbpLK1jQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/nVsZGO5dvqmmRibzfMYDxOzwTftu4mtsTnajgLJLMvu4utv0clTee7mV0sWTLOIL9CAFM7a8S5TTFHFXkLwI8Qg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>登录成功！</p>
+<h6 id="2-Github-配置-Travis-CI-权限"><a href="#2-Github-配置-Travis-CI-权限" class="headerlink" title="2. Github 配置 Travis CI 权限"></a><strong>2. Github 配置 Travis CI 权限</strong></h6><p>点击当前页按钮 Activate all repositories using GitHub Apps</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/nVsZGO5dvqmmRibzfMYDxOzwTftu4mtsTkia5QnlQJfSt4rYwvf6J7dLSz8BhoqOObicEqpgh89Mlox5SeHtoFSYQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>进入授权页面，点击 Approve Install</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/nVsZGO5dvqmmRibzfMYDxOzwTftu4mtsTiaDvorvVQ60vUxLGRswHh1W2vCqfpeH7rrM9Oh3RtjmzAxTnoskib6OQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>初次关联的话，会重定向一些页面。如果有需要就选择绿色按钮，绿色代表同意，完成授权。</p>
+<h6 id="3-新建-Personal-Access-Token"><a href="#3-新建-Personal-Access-Token" class="headerlink" title="3. 新建 Personal Access Token"></a><strong>3. 新建 Personal Access Token</strong></h6><p>点击 github.com/settings/to… 点击 Generate new token</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/nVsZGO5dvqmmRibzfMYDxOzwTftu4mtsTy7rUgQUAgJ1Y8RoCug2NgSKNnyNTDCs8N16nun1c3OnF4wBvibbW8GQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>键入 <strong>Token</strong> <strong>名称，在</strong> <strong>Note</strong> <strong>项填入</strong> <strong>GH_TOKEN</strong> <strong>并只勾选</strong> <strong>repo</strong> 的权限。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/nVsZGO5dvqmmRibzfMYDxOzwTftu4mtsTKtIMsu4iaIibrXKYnR7dSfWShg4pSMHB3wiaMNZTNK5boJBcOdxycqatA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>左下角 <strong>Generate token Token</strong> <strong>生成成功，复制新生成的</strong> Token，如下图所示：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/nVsZGO5dvqmmRibzfMYDxOzwTftu4mtsTK0m7ODC7ZlibiajdU3RqZAaejuvQDyf9T0QN4l7MT4E9fiaC7M4cDMziaw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<h6 id="4-Travis-CI-配置-Environment-Variables-对应的项目仓库配置环境变量"><a href="#4-Travis-CI-配置-Environment-Variables-对应的项目仓库配置环境变量" class="headerlink" title="4. Travis CI 配置 Environment Variables 对应的项目仓库配置环境变量"></a><strong>4. Travis CI 配置 Environment Variables 对应的项目仓库配置环境变量</strong></h6><p>回到 <strong>Travis CI</strong> <strong>主页，右侧选择选项目仓库，点击右上角</strong> <strong>More options</strong> <strong>下拉选择Settings，滚动至</strong> Environment Variables。</p>
+<p>新建环境变量 <strong>Name</strong> <strong>为</strong> <strong>GH_Token VALUE，作为我们在</strong> <strong>GitHub</strong> <strong>生成的</strong> Token。</p>
+<p>ps：请确保 <strong>DISPLAY VALUE IN BUILD LOG</strong> <strong>不被勾选，避免你的</strong> Token 被泄漏。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/nVsZGO5dvqmmRibzfMYDxOzwTftu4mtsTngLNoEXc9sSg8roDMnlkErjIFbV1jgD2qg4lOe6Iq3dia3VGErIh4ZA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/nVsZGO5dvqmmRibzfMYDxOzwTftu4mtsTrA1o9S3m2l63jjm9nVxhiaKG00tFSIt3bicrllCh7So1iaPGrx4VII13A/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/nVsZGO5dvqmmRibzfMYDxOzwTftu4mtsTrA1o9S3m2l63jjm9nVxhiaKG00tFSIt3bicrllCh7So1iaPGrx4VII13A/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<h4 id="项目配置CI"><a href="#项目配置CI" class="headerlink" title="项目配置CI"></a><strong>项目配置CI</strong></h4><h5 id="1-新建一个-travis-yml"><a href="#1-新建一个-travis-yml" class="headerlink" title="1. 新建一个 .travis.yml"></a><strong>1. 新建一个 .travis.yml</strong></h5><p>复制以下内容至 <strong>.travis.yml</strong> **文件</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/nVsZGO5dvqmmRibzfMYDxOzwTftu4mtsTdTpYvRofLiaSmeP8fDX6OAnDuxVibAuCqZEV8ibN9BWmPdGXIPSfwGbVA/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<h5 id="2-提交本地代码至远端"><a href="#2-提交本地代码至远端" class="headerlink" title="2. 提交本地代码至远端"></a><strong>2. 提交本地代码至远端</strong></h5><p>git add .</p>
+<p>git commit -m “add travis config”</p>
+<p>git push origin master</p>
+<p>Travis CI 应该会自动开始运行，并将生成的文件推送到同一 <strong>repository</strong> <strong>下的</strong> <strong>gh-pages</strong> 分支下。</p>
+<p>回到 <strong>Travis CI</strong> 官网，如下图所示，完成部署。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/nVsZGO5dvqmmRibzfMYDxOzwTftu4mtsTMeHCia8E7Cz6Oia6GAVZqfI24tBs98mSsibywDspOicKTiafHU1icOIj8fCQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<h5 id=""><a href="#" class="headerlink" title=""></a></h5><h5 id="3-修改-GithubPages-部署分支"><a href="#3-修改-GithubPages-部署分支" class="headerlink" title="3. 修改 GithubPages 部署分支"></a><strong>3. 修改 GithubPages 部署分支</strong></h5><p>回到 <strong>Github</strong> <strong>对应项目主页，点击</strong> **Settings。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/nVsZGO5dvqmmRibzfMYDxOzwTftu4mtsTNkU4KVZsjLgEobLu0LhfOUmUxYgtEdrMQtRkBEichiax6TZrteaM7xNQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>右侧侧边栏选择 <strong>Pages Source，选择分支为</strong> <strong>gh-pages（默认部署为</strong> <strong>master</strong> <strong>分支) 点击</strong> Save。</p>
+<h3 id="4-浏览器-访问-xxxx-github-io"><a href="#4-浏览器-访问-xxxx-github-io" class="headerlink" title="4. 浏览器 访问 xxxx.github.io"></a><strong>4. 浏览器 访问 xxxx.github.io</strong></h3><p><img src="https://mmbiz.qpic.cn/mmbiz_png/nVsZGO5dvqmmRibzfMYDxOzwTftu4mtsT20vGbk5l3U5ibbxqJvO7jz4ibKz85tMc9KFOgrzWejSjKoZ8mpmFslRw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/nVsZGO5dvqmmRibzfMYDxOzwTftu4mtsTzaZkrS4080fJaTz0aVFxYss18TEcabM2cnNwT8dkQQdmhyiaUjO3Rhg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>没有成功？？？我原本也是这样认为的，各种百度，吸取百家之长后，原来此时只是需要等 10 分钟或者 20 分钟。</p>
+<p>稳住！！！</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/nVsZGO5dvqmmRibzfMYDxOzwTftu4mtsTOuic6MYsu5g97PUl0RasMJCNIlzA0NvAg0dva97zp9KfskMJgOISlHQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p><strong>done!!!</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/06/08/hexoUse/" data-id="ckpnrt6mm0001e4s6fv8201nn" data-title="Hexo 博客搭建教程" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-MyWord" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/06/08/MyWord/" class="article-date">
+  <time class="dt-published" datetime="2021-06-08T06:31:39.000Z" itemprop="datePublished">2021-06-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/06/08/MyWord/">MyWord</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h4 id="我的世界很简单-简单到我每天都吃龙虾"><a href="#我的世界很简单-简单到我每天都吃龙虾" class="headerlink" title="我的世界很简单 简单到我每天都吃龙虾"></a><em>我的世界很简单 简单到我每天都吃龙虾</em></h4>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/06/08/MyWord/" data-id="ckpnrt6mh0000e4s637frbthq" data-title="MyWord" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/06/08/hello-world/" class="article-date">
+  <time class="dt-published" datetime="2021-06-08T06:26:21.793Z" itemprop="datePublished">2021-06-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/06/08/hello-world/">我的第一篇文章</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/06/08/hello-world/" data-id="ckpnnu9z60000lls68vzi4pcr" data-title="我的第一篇文章" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/06/08/hexoUse/">Hexo 博客搭建教程</a>
+          </li>
+        
+          <li>
+            <a href="/2021/06/08/MyWord/">MyWord</a>
+          </li>
+        
+          <li>
+            <a href="/2021/06/08/hello-world/">我的第一篇文章</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
